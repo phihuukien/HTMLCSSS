@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input[type="text"]{ 
+        width: 30px}
+        </style>
+<body>
+    <form action="" name="add">
+        <p>
+            so a : <input type="text" name="a" id="a">
+            so b : <input type="text" name="b" id="">
+            <input type="button" name="cong" value="+">
+            <input type="button" name="tru" value="-">
+            <input type="button" name="nhan" value="*">
+            <input type="button" name="chia" value="/">
+            = <input type="text" name="ketqau">
+        </p>
+    </form>
+    <script>
+        var talk = document.forms["add"];
+        talk.cong.onclick = function(){
+            var tong = 0;
+            tong = parseInt(talk.a.value) + parseInt(talk.b.value);
+            talk.ketqau.value = tong;
+        }
+        talk.tru.onclick = function(){
+            var hieu = 0;
+            hieu = parseInt(talk.a.value) - parseInt(talk.b.value);
+            talk.ketqau.value = hieu;
+        }
+        talk.nhan.onclick = function(){
+            var tich = 0;
+            tich = parseInt(talk.a.value) * parseInt(talk.b.value);
+            talk.ketqau.value = tich;
+        }
+        talk.chia.onclick = function(){
+            var thuong = 0;
+            thuong = parseInt(talk.a.value) / parseInt(talk.b.value);
+            talk.ketqau.value = thuong;
+        }
+    </script>
+</body>
+</html>

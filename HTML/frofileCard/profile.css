@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(to right,#4daf54, #3d8880);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: "Poppins";
+}
+
+.card_1, .card_2, .card_3{
+    width: 300px;
+    height: 400px;
+    background: black;
+    margin: auto 10px;
+   color: white;
+   border-radius: 10px;
+   text-align: center;
+   overflow: hidden;
+}
+.card_img{
+    width: 120px;
+    height: 120px;
+    border: 4px solid #f2726a;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+   transform: translateY(20px);
+   transition: 0.5s;
+}
+.card_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+}
+.card_img:hover{
+    width: 100%;
+    height: 100%;
+    border: unset;
+    transform: unset;
+    border-radius: unset;
+}
+.card_name{
+    margin-top: 25px;
+}
+.card_position{
+    
+    color: #f2726a;
+}
+.card_cocial{
+    margin: 25px 0 ;
+}
+.card_cocial a{
+    margin: 25px 20px;
+    color: white;
+    font-size: 20px;
+}
+.card_cocial a:hover{
+    color: #f2726a;
+}
+.card_Contact button{
+    width:150px;
+    height:50px;
+    color: white;
+    border: 1px solid #f2726a;
+    border-radius: 5px;
+    background: transparent;
+    transition: 0.5s;
+}
+button:hover {
+    background:#f2726a ;
+}

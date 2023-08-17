@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  
+</head>
+<body>
+    <div>
+    <h3>Tính chu vi - diện tích hình tròn</h3>
+    <p>Nhập bán kính hình tròn: <input type="number"  id="radius" placeholder="Circle radius"  onkeyup="tan()"/></p> 
+    <p>Nhập bán kính hình tròn: <input type="number"  id="radius_2" placeholder="Circle radius"  onkeyup="tan()"/></p><!-- onkeyup="tan()" using for javascript-->
+
+  <input id="circumference">
+    <br/>
+    <span id="acreage">0</span>
+    </div>
+    <table>
+        <tr>
+            <td rowspan="4">d</td>
+            <td>d</td>
+            <td>d</td>
+        </tr>
+        <tr>
+            
+            <td>d</td>
+            <td>d</td>
+        </tr>
+        <tr>
+         
+            <td>d</td>
+            <td>d</td>
+        </tr>
+        <tr>
+          
+            <td>d</td>
+            <td>d</td>
+        </tr>
+    </table>
+
+
+
+    <script type="text/javascript"> //JAVASCRIPT
+     function tan(){
+        var r = document.getElementById('radius').value;
+        var r2 = document.getElementById('radius_2').value;
+        var sum = r * r2 ;
+        document.getElementById('circumference').value = sum;
+
+      
+        document.getElementById('acreage').innerText = sum;
+    }
+    
+    </script>
+
+    <!-- <script type="text/javascript"> //JQUERY
+    $(document).ready(function(){
+        $("#radius").keyup(function(){
+        var r = $("#radius").val();
+        var circumferenceOfCircle = 2*3.14*r;
+        var acreageOfCircle = 3.14*r*r;
+
+        $("#circumference").text(circumferenceOfCircle);
+        $("#acreage").text(acreageOfCircle);
+
+            
+        })
+    })
+    </script> -->
+
+</body>
+</html>

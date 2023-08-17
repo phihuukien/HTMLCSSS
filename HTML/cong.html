@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Định dạng văn bản</title>
+</head>
+<body>
+    
+
+    <input type="radio" name="sex" value="Male">Male</input>
+    <input type="radio" name="sex" value="Female">Female</input>
+    <input type="radio" name="sex" value="Unknown">Unknown</input>
+    
+    <br/>
+    <br/>
+    <br/>
+    
+    <input type='button' value='Display Selected' id='isSelect'>
+    <input type='button' value='Select Male' id='selectMale'>
+    <input type='button' value='Select Female' id='selectFemale'>
+    <input type='button' value='Select Unknown' id='selectUnknown'>
+    <input type='button' value='Reset' id='reset'>
+</body>
+
+</html>
+<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+  
+      $("#isSelect").click(function () {
+          
+      alert($('input:radio[name=sex]:checked').val());
+              
+      });
+      
+      $("#selectMale").click(function () {
+          
+      $('input:radio[name=sex]:nth(0)').attr('checked',true);
+      //$('input:radio[name=sex]')[0].checked = true;
+  
+      });
+      
+      $("#selectFemale").click(function () {
+          
+      $('input:radio[name=sex]:nth(1)').attr('checked',true);
+      //$('input:radio[name=sex]')[1].checked = true;
+              
+      });
+      
+      $("#selectUnknown").click(function () {
+          
+      $('input:radio[name=sex]:nth(2)').attr('checked',true);
+      //$('input:radio[name=sex]')[2].checked = true;
+  
+      });
+      
+      $("#reset").click(function () {
+          
+      $('input:radio[name=sex]').attr('checked',false);
+      
+      });
+          
+    });
+  </script>

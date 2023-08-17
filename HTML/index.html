@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //mang nhieu chieu
+        var mang2chieu = [
+            [
+                '1',//for j
+                'nguyen van A',
+                '19'
+            ],//for i
+            ['2', 'nguyen van B', '20'],//toàn bộ chỗ này
+            ['3', 'Nguyen van C', '18']
+        ];
+
+        //document.write(mang2chieu[2][0]);
+        document.write("<br />");
+        var html = '<table width="500" border="1"><tr><th>#</th><th>Ho Ten</th><th>Tuoi</th></tr>';
+        for (i = 0; i < 3; i++) {
+            html += "<tr>";
+            for (j = 0; j < 3; j++) {
+                html += "<td>" + mang2chieu[i][j] + "</td>";
+            }
+            html += "</tr>";
+        }
+        html += "</table>";
+        document.write(html);
+    </script>
+</body>
+
+</html>

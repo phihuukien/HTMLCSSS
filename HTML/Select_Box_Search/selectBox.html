@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>HTML form with dropdown select</title>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+ $(function(){
+  $("#account").select2();
+ }); 
+</script>
+<style>
+body{
+    background: #eee;
+}
+.signupdiv{
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 1px 2px 3px #ccc;
+    border-radius: 7px;
+    text-align: center;
+    width: 35%;
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+}
+#signupform{
+    padding: 15px;
+}
+input, select{
+    margin-bottom: 10px;
+    height: 38px;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+}
+input{
+    width: 97%;
+}
+button, select{
+    width: 100%;
+}
+button{
+    height: 45px;
+    background: #188c01;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+</style>
+</head>
+<body>
+<div class="">
+ 
+  <!-- <input type="text" id="name" placeholder="Your Name *" required>
+  <input type="email" id="email" placeholder="Your Email *" required> -->
+  <select id="account">  
+   <option value="">Select your country</option>
+   <option value="US">United States of America</option>
+   <option value="KE">Kenya</option>
+   <option value="UK">United Kingdom</option>
+   <option value="IN">India</option>
+   <option value="CN">China</option>
+   <option value="CA">Canada</option>
+   <option value="ZA">South Africa</option>
+  </select>
+  <!-- <input type="password" id="password" placeholder="Create a Password *" required>-->
+
+</div>
+</body>
+</html>

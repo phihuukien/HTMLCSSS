@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right,#4daf54, #3d8880);
+}
+.content{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+   
+    background: white;
+}
+.conten_2{
+    width: 98%;
+    margin-top: 10px;
+    border: 1px solid #a9a2a2;
+    
+}
+.infor{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+
+}
+.infor .sp_right{
+    padding-right: 6px;
+}
+.infor .infor_left{
+    padding-left: 6px;
+}
+.conten_2 h1{
+    width: 100%;
+    text-align: center;
+    margin:  20px 0 20px 0;
+}
+.address{
+    margin: 50px;
+}
+.address  p{
+    margin-bottom: 10px;
+}
+table, th ,td{
+    border:1px solid black;
+    border-collapse: collapse;
+}
+td{
+    padding: 10px ;
+}
+.sign{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 150px;
+
+}
+.sign_1{
+    width: 33.3%;
+}

@@ -1,0 +1,132 @@
+:root{
+    --prinary-color:#4daf54;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right,#4daf54, #3d8880);
+    font-family: "poppins";
+}
+.card{
+    margin: 120px auto;
+    padding: 20px;
+    width: 320px;
+    height: 400px;
+    background: #272d40;
+    border-radius: 10px;
+    color: white;
+     position: relative;
+}
+.card__heart, .card__cart{
+    position: absolute;
+    font-size: 25px;
+    top: 25px;
+    left: 15px;
+}
+.card__cart{
+    left: unset;
+    right: 20px;
+}
+.card__img{
+    width: 90%;
+    margin: auto;
+    transition: 0.5s;
+}
+.card__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.card__title, .card__price{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.5s;
+}
+.card__title{
+    color: var(--prinary-color);
+}
+.card__size, .card__color{
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+}
+.card__size span{
+    background: white;
+    color: black;
+    padding: 1px 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.card__size  .first{
+margin-left: 15px;
+}
+.card__color .red{
+    background: rgb(250, 3, 3);
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    margin: 0 5px 0 10px;
+}
+.card__color .green{
+    background: rgb(0, 145, 36);
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+.card__color .black{
+    background: rgb(10, 8, 8);
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+.card__button button{
+    border: none;
+    padding: 7px 15px;
+    border-radius: 3px;
+    color: white;
+    background: var(--prinary-color);
+    margin: 0 10px 0  0;
+    font-weight: bold;
+    outline: none;
+}
+.card__button button:hover{
+    transform: scale(0.9);
+    cursor: pointer;
+}
+.card:hover .card__img{
+    transform:translateY(-80px) rotate(-20deg);
+}
+.card:hover .card__title{
+    transform:translate(-43px,-50px) ;
+}
+.card:hover .card__price{
+    transform:translate(-116px,-50px) ;
+}
+.card__size{
+    margin-top: 170px;
+   
+}
+.card__button, .card__color, .card__size{
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+   
+}
+.card:hover .card__button, 
+.card:hover .card__color, 
+.card:hover .card__size{
+    visibility: visible;
+    opacity: 100;
+    transform:translateY(-170px) ;
+}
+
+
+
+

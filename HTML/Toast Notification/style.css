@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, lightblue, darkblue);
+}
+button{
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 5px;
+  color: white;
+  font-size: 20px;
+}
+.success{
+  background: green;
+}
+.warning{
+  background: orange;
+}
+.error{
+  background: red;
+}
+#toasts{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+.toast{
+  padding: 10px;
+  font-size: 23px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  overflow: hidden;
+  margin-top: 10px;
+  animation:  slide-show 2s ease forwards;
+}
+.toast i {
+  margin: 0 10px;
+}
+
+.toast.succes{
+  border-left: 5px solid green;
+  background: rgba(0, 128, 0, 0.3);
+}
+.toast.succes .coutdown{
+  background: green;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  animation: coutdown 4s ease forwards;
+  border-radius: 2px;
+}
+.toast.Warning{
+  border-left: 5px solid orange;
+  background: rgba(255, 165, 0, 0.3);
+}
+.toast.Warning .coutdown{
+  background: orange;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  animation: coutdown 4s ease forwards;
+  border-radius: 2px;
+}
+.toast.Error{
+  border-left: 5px solid red;
+  background: rgba(255, 0, 0, 0.3);
+}
+.toast.Error .coutdown{
+  background: red;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  animation: coutdown 4s ease forwards;
+  border-radius: 2px;
+}
+@keyframes coutdown {
+  0%{
+    width: 100%;
+  }
+  
+  100%{
+    width: 0%;
+  }
+}
+@keyframes slide-show{
+  0%{
+    transform: translateX(100%);
+  }
+  25%{
+    transform: translateX(-10%);
+  }
+  50%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-10px);
+  }
+}
+@keyframes slide-hide{
+  0%{
+    transform: translateX(-8px);
+  }
+  5%{
+    transform: translateX(-3px);
+  }
+  60%{
+    transform: translateX(-10%);
+  }
+  100%{
+    transform: translateX(150%);
+  }
+}
